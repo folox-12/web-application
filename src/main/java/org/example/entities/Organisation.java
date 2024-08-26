@@ -8,12 +8,6 @@ public class Organisation {
             public String StoreDate;
                     public String BlockDate;
 
-   String getID() { return ID;}
-   String getINN() { return INN;}
-
-    void setID(String ID) { this.ID = ID;}
-    void setINN(String INN) { this.INN = INN;}
-
     @Override
     public String toString() {
         return "Organisation{" +
