@@ -1,4 +1,4 @@
-package org.example.RequestAPi;
+package org.example.entity;
 
 import java.util.Arrays;
 import java.util.List;
