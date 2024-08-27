@@ -1,10 +1,10 @@
 package org.example;
 
 import org.apache.log4j.Logger;
-import org.example.entities.Organisation;
+import org.example.entity.Organisation;
 import org.example.json.JsonReader;
-import org.example.RequestAPi.RequestApi;
-import org.example.RequestAPi.ResponseFromServer;
+import org.example.entity.RequestApi;
+import org.example.entity.ResponseFromServer;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 public class App {
     private static final String API_URL = "https://api.spimex.com/otc/lookup-tables/1";
-    private static final Logger LOG = Logger.getLogger(RequestApi.class.getName());
+    private static final Logger LOG = Logger.getLogger(App.class.getName());
 
     public static void main( String[] args ) {
         final String RESIDENT_OF_RF = "Резидент РФ";
@@ -20,7 +20,7 @@ public class App {
 
         Scanner scanner = new Scanner(System.in);
 
-        String listOfOrganisations= RequestApi.getResponseFromGetRequest(API_URL);
+        String listOfOrganisations= RequestApi.getResponseFromRequest(API_URL);
 
         ResponseFromServer<Organisation> response = JsonReader.getDeserializationObjects(
                 listOfOrganisations,
@@ -40,6 +40,7 @@ public class App {
                                 .equals(InnFromInput.substring(0, LENGTH_OF_INN_TO_FILTERING)))
                 .collect(Collectors.toList());
 
-        LOG.info(organisationsWithRussianResidenceAndFilteringINN.toString());
+        organisationsWithRussianResidenceAndFilteringINN.forEach(el -> LOG.info(el.toString()));
+
     }
 }

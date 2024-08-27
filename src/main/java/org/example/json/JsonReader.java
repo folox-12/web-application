@@ -1,7 +1,7 @@
 package org.example.json;
 
 import org.codehaus.jackson.map.ObjectMapper;
-import org.example.RequestAPi.ResponseFromServer;
+import org.example.entity.ResponseFromServer;
 
 import java.io.IOException;
 
