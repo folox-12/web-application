@@ -5,11 +5,13 @@ import org.example.entities.Organisation;
 import org.example.json.JsonReader;
 import org.example.RequestAPi.RequestApi;
 import org.example.RequestAPi.ResponseFromServer;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.Scanner;
 
+@SpringBootApplication
 public class App {
     private static final String API_URL = "https://api.spimex.com/otc/lookup-tables/1";
     private static final Logger LOG = Logger.getLogger(RequestApi.class.getName());
