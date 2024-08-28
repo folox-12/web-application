@@ -1,12 +1,15 @@
-package org.example.entity;
+package org.example.entity.organisation;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Organisation {
     public String ID;
     public String INN;
     public String Name;
     public String  Residence;
-            public String StoreDate;
-                    public String BlockDate;
+    public String StoreDate;
+    public String BlockDate;
 
     @Override
     public String toString() {

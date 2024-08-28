@@ -1,14 +1,29 @@
 package org.example.entity;
 
-import java.util.Arrays;
-import java.util.List;
+public class ResponseFromServer {
+    private Integer status = null;
+    private String code = null;
 
-public class ResponseFromServer<T> {
-    public String result;
-    public T[] records;
+    public ResponseFromServer(int status, String code) {
+        this.status = (Integer) status;
+        this.code = code;
+    }
 
-    public List<T>getResponse() {
-        return Arrays.asList(records);
+    public ResponseFromServer() {}
+
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = Integer.valueOf(status);
+    }
+
+    public String getCode() {
+        return code;
+    }
+    public void setCode(String code) {
+        this.code = code;
     }
 }
-
