@@ -1,13 +1,10 @@
-package org.example.entity.organisation;
+package org.example.entity;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class Organisation {
     public String ID;
     public String INN;
     public String Name;
-    public String  Residence;
+    public String Residence;
     public String StoreDate;
     public String BlockDate;
 

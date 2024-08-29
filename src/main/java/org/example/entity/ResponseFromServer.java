@@ -9,8 +9,8 @@ public class ResponseFromServer {
         this.code = code;
     }
 
-    public ResponseFromServer() {}
-
+    public ResponseFromServer() {
+    }
 
     public int getStatus() {
         return status;
@@ -23,6 +23,7 @@ public class ResponseFromServer {
     public String getCode() {
         return code;
     }
+
     public void setCode(String code) {
         this.code = code;
     }

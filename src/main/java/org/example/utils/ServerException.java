@@ -1,8 +1,8 @@
-package org.example.integration;
+package org.example.utils;
 
 import org.apache.log4j.Logger;
 
-public class ServerException  extends Exception{
+public class ServerException extends Exception {
     public ServerException(String message) {
         super(message);
         Logger LOG = Logger.getLogger(ServerException.class);

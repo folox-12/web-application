@@ -10,7 +10,7 @@ public class ApiResponseFromServer<T> {
     public String result;
     public T[] records;
 
-    public List<T>getResponse() {
+    public List<T> getResponse() {
         return Arrays.asList(records);
     }
 }
