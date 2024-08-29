@@ -1,10 +1,10 @@
-package org.example.integration;
+package org.example.utils;
 
 public enum StatusRequest {
-    SUCCESS (200),
-    ERROR (500);
+    SUCCESS(200),
+    ERROR(500);
 
-    private int title;
+    private final int title;
 
     StatusRequest(int title) {
         this.title = title;
